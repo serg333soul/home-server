@@ -1,0 +1,17 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: 1000:1000   # Вказуємо ID вашого користувача (ruban), щоб не було проблем з правами
+    network_mode: "host" # Використовуємо мережу сервера напряму (простіше для DLNA/Discovery)
+    volumes:
+      - ./config:/config              # Зберігаємо налаштування тут
+      - ./cache:/cache                # Зберігаємо кеш тут
+      # ПІДКЛЮЧАЄМО ВАШ SSD (Тільки читання для безпеки: ro)
+      - /mnt/ssd_storage/Admin_Files/Videos:/media/movies:ro
+      - /mnt/ssd_storage/Admin_Files/Photos:/media/photos:ro
+    devices:
+      # МАГІЯ: Прокидаємо відеокарту Intel у контейнер для транскодування
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/card0:/dev/dri/card0
+    restart: unless-stopped
