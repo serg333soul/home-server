@@ -1,0 +1,11 @@
+title: Home Server
+background:
+  image: https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop
+  opacity: 0.5
+
+# Вимикаємо перевірку хоста, щоб уникнути помилки "Host validation failed"
+# Це безпечно, бо ми працюємо через Tailscale (VPN)
+# Коли ви станете Senior, тут можна буде прописати strict allow-list
+server:
+  host: 0.0.0.0
+  port: 3000

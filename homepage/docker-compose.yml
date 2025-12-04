@@ -1,0 +1,18 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 3000:3000
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    env_file:
+      - .env
+    environment:
+      - PUID=1000
+      - PGID=1000
+      # Це змінна для логів, щоб бачити помилки, якщо будуть
+      - HOMEPAGE_ALLOWED_HOSTS=100.100.84.4:3000
+      - LOG_LEVEL=debug
+    restart: unless-stopped

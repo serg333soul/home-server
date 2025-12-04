@@ -1,3 +1,4 @@
 .env
 jellyfin/config/
 jellyfin/cache/
+homepage/.env

@@ -1,0 +1,21 @@
+- Сервіси:
+    - Nextcloud:
+        icon: nextcloud.png
+        href: "http://100.100.84.4:8080/"  # Tailscale IP
+        description: "Особисті файли"
+        server: my-docker
+        container: nextcloud-app-1     # Ім'я контейнера для відображення статусу (Running/Stopped)
+        widget:
+          type: nextcloud
+          url: "http://192.168.1.115:8080" # Tailscale IP
+          username: "serg333soul"            # логін в Nextcloud
+          password: "{{HOMEPAGE_VAR_NEXTCLOUD_PASSWORD}}"
+# 12345
+
+- "Медіа":
+    - Jellyfin:
+        icon: jellyfin.png
+        href: "http://100.100.84.4:8096/"  # Tailscale IP
+        description: "Відео"
+        server: my-docker
+        container: jellyfin
