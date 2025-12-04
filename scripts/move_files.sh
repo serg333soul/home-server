@@ -28,7 +28,7 @@ local USER_LABEL=$1
         if [ -f "$file" ]; then
             FILENAME=$(basename "$file")
             FILESIZE=$(du -h "$file" | cut -f1)
-            TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
+            TIMESTAMP=$(date "+%d-%m-%Y %H:%M")
             
             EXTENSION="${FILENAME##*.}"
             EXTENSION="${EXTENSION,,}"
@@ -46,10 +46,10 @@ local USER_LABEL=$1
             chown "$LINUX_OWNER:$LINUX_OWNER" "$TARGET_DIR/$FILENAME"
             
             if [ $? -eq 0 ]; then
-                echo "$TIMESTAMP | $USER_LABEL | $SUBFOLDER | $FILENAME -> OK" >> "$LOG_FILE"
-                ((MOVED_COUNTER++)) # Рахуємо успішні переміщення
+              echo "[$TIMESTAMP] | $USER_LABEL | $FILESIZE | $FILENAME" >> "$LOG_FILE"
+              ((MOVED_COUNTER++)) # Рахуємо успішні переміщення
             else
-                echo "$TIMESTAMP | ПОМИЛКА: $FILENAME" >> "$LOG_FILE"
+              echo "[$TIMESTAMP] | ПОМИЛКА | $USER_LABEL | Не вдалося перемістити $FILENAME" >> "$LOG_FILE"
             fi
         fi
     done
@@ -57,9 +57,8 @@ local USER_LABEL=$1
     # --- НОВИЙ БЛОК: ОНОВЛЕННЯ БАЗИ ДАНИХ ---
     # Запускаємо сканування ТІЛЬКИ якщо хоч один файл був переміщений
     if [ $MOVED_COUNTER -gt 0 ]; then
-        # УВАГА: Замініть 'nextcloud-app-1' на реальне ім'я вашого контейнера з 'docker ps'
         docker exec -u 33 nextcloud-app-1 php occ files:scan --path="/$NC_USER/files/MobileUploads" > /dev/null 2>&1
-        echo "$(date "+%Y-%m-%d %H:%M:%S") | INFO | Базу Nextcloud оновлено для $USER_LABEL" >> "$LOG_FILE"
+        echo "[$TIMESTAMP] | INFO | Базу Nextcloud оновлено $MOVED_COUNTER файлів для $USER_LABEL" >> "$LOG_FILE"
     fi
 }
 
