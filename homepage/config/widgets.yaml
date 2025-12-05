@@ -5,7 +5,9 @@
 - resources:
     cpu: true
     memory: true
-    disk: /
+    disk:
+      - /
+      - /mnt/ssd_storage
 
 - search:
     provider: duckduckgo

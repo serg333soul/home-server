@@ -7,12 +7,14 @@ services:
     volumes:
       - ./config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      # Наш новий диск (тільки читання)
+      - /mnt/ssd_storage:/mnt/ssd_storage:ro
     env_file:
       - .env
     environment:
       - PUID=1000
       - PGID=1000
-      # Це змінна для логів, щоб бачити помилки, якщо будуть
-      - HOMEPAGE_ALLOWED_HOSTS=100.100.84.4:3000
       - LOG_LEVEL=debug
+      # Ваша Tailscale IP (переконайтесь, що вона вірна)
+      - HOMEPAGE_ALLOWED_HOSTS=100.100.84.4:3000
     restart: unless-stopped
