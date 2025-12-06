@@ -8309,3 +8309,744 @@
 [2025-12-05T15:55:39.614Z] debug: <resources> memory: {"total":8214233088,"free":273764352,"used":7940468736,"active":1978179584,"available":6236053504,"buffers":326451200,"cached":5755990016,"slab":565530624,"buffcache":6647971840,"reclaimable":436695040,"swaptotal":8589926400,"swapused":524288,"swapfree":8589402112,"writeback":0,"dirty":458752}
 [2025-12-05T15:55:39.616Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18620854272,"available":39318749184,"use":32.14,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18620854272,"available":39318749184,"use":32.14,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":45658112,"available":466039754752,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
 [2025-12-05T15:55:39.621Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18620854272,"available":39318749184,"use":32.14,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18620854272,"available":39318749184,"use":32.14,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":45658112,"available":466039754752,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T06:32:38.017Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T06:32:38.019Z] debug: No containers were found with homepage labels.
+[2025-12-06T06:32:38.031Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T06:32:38.042Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18708193280,"available":39231410176,"use":32.29,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":46755840,"available":466038657024,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18708193280,"available":39231410176,"use":32.29,"mount":"/app/config","rw":true}]
+[2025-12-06T06:32:38.048Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T06:32:38.049Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18708193280,"available":39231410176,"use":32.29,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":46755840,"available":466038657024,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18708193280,"available":39231410176,"use":32.29,"mount":"/app/config","rw":true}]
+[2025-12-06T06:32:38.050Z] debug: <resources> memory: {"total":8214220800,"free":6569566208,"used":1644654592,"active":987787264,"available":7226433536,"buffers":85151744,"cached":851521536,"slab":136036352,"buffcache":1072709632,"reclaimable":53321728,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":192512}
+[2025-12-06T06:32:38.305Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T06:32:38.307Z] debug: No containers were found with homepage labels.
+[2025-12-06T06:32:38.607Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T06:32:38.612Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T06:32:38.625Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18708201472,"available":39231401984,"use":32.29,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":46755840,"available":466038657024,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18708201472,"available":39231401984,"use":32.29,"mount":"/app/config","rw":true}]
+[2025-12-06T06:32:38.625Z] debug: <resources> memory: {"total":8214220800,"free":6566080512,"used":1648140288,"active":989331456,"available":7224889344,"buffers":85192704,"cached":852951040,"slab":136638464,"buffcache":1074782208,"reclaimable":53895168,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":208896}
+[2025-12-06T06:32:38.629Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18708201472,"available":39231401984,"use":32.29,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":46755840,"available":466038657024,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18708201472,"available":39231401984,"use":32.29,"mount":"/app/config","rw":true}]
+[2025-12-06T06:32:38.655Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T06:32:38.655Z] debug: No containers were found with homepage labels.
+[2025-12-06T06:32:41.156Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T06:32:41.161Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T06:32:41.161Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T06:32:41.162Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T06:32:41.163Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T06:32:41.163Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T06:32:41.584Z] debug: <resources> memory: {"total":8214220800,"free":6565752832,"used":1648467968,"active":989491200,"available":7224729600,"buffers":85192704,"cached":853114880,"slab":136654848,"buffcache":1074962432,"reclaimable":53903360,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":184320}
+[2025-12-06T06:32:41.585Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18708205568,"available":39231397888,"use":32.29,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":46755840,"available":466038657024,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18708205568,"available":39231397888,"use":32.29,"mount":"/app/config","rw":true}]
+[2025-12-06T06:32:41.591Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18708209664,"available":39231393792,"use":32.29,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":46755840,"available":466038657024,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18708209664,"available":39231393792,"use":32.29,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:25.961Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:25.966Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721267712,"available":39218335744,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721267712,"available":39218335744,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:25.971Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721267712,"available":39218335744,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721267712,"available":39218335744,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:25.972Z] debug: <resources> memory: {"total":8214220800,"free":5872640000,"used":2341580800,"active":1073233920,"available":7140986880,"buffers":127610880,"cached":1418305536,"slab":159522816,"buffcache":1705439232,"reclaimable":72503296,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":270336}
+[2025-12-06T16:44:25.982Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:26.013Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:44:26.014Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:44:28.358Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:28.359Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:28.364Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:28.366Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:28.367Z] debug: <resources> memory: {"total":8214220800,"free":5870575616,"used":2343645184,"active":1075277824,"available":7138942976,"buffers":127610880,"cached":1418317824,"slab":159563776,"buffcache":1705492480,"reclaimable":72503296,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":290816}
+[2025-12-06T16:44:28.394Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:44:28.394Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:44:31.671Z] debug: <resources> memory: {"total":8214220800,"free":5865701376,"used":2348519424,"active":1080156160,"available":7134064640,"buffers":127614976,"cached":1418317824,"slab":159547392,"buffcache":1705480192,"reclaimable":72503296,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":290816}
+[2025-12-06T16:44:31.672Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:31.677Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721275904,"available":39218327552,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:33.833Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:33.839Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:33.847Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721280000,"available":39218323456,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721280000,"available":39218323456,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:33.847Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721280000,"available":39218323456,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721280000,"available":39218323456,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:33.848Z] debug: <resources> memory: {"total":8214220800,"free":5864669184,"used":2349551616,"active":1081180160,"available":7133040640,"buffers":127614976,"cached":1418317824,"slab":159543296,"buffcache":1705476096,"reclaimable":72503296,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":86016}
+[2025-12-06T16:44:33.874Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:44:33.874Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:44:36.820Z] debug: <resources> memory: {"total":8214220800,"free":5863649280,"used":2350571520,"active":1082191872,"available":7132028928,"buffers":127614976,"cached":1418326016,"slab":159547392,"buffcache":1705488384,"reclaimable":72503296,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":94208}
+[2025-12-06T16:44:36.821Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721284096,"available":39218319360,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721284096,"available":39218319360,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:36.826Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721284096,"available":39218319360,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721284096,"available":39218319360,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:37.956Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:44:37.960Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:44:37.960Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:44:37.961Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:44:37.961Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:44:37.962Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:44:48.643Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:44:48.646Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:44:48.646Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:44:56.353Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:56.360Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:56.363Z] debug: <resources> memory: {"total":8214220800,"free":5860483072,"used":2353737728,"active":1085321216,"available":7128899584,"buffers":127631360,"cached":1418338304,"slab":159596544,"buffcache":1705566208,"reclaimable":72519680,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":4096}
+[2025-12-06T16:44:56.367Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:56.372Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:56.379Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:44:56.379Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:44:57.691Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:57.692Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:44:57.712Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:57.715Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721300480,"available":39218302976,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:44:57.716Z] debug: <resources> memory: {"total":8214220800,"free":5860225024,"used":2353995776,"active":1085579264,"available":7128641536,"buffers":127631360,"cached":1418338304,"slab":159604736,"buffcache":1705574400,"reclaimable":72519680,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":12288}
+[2025-12-06T16:44:57.726Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:44:57.726Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:44:59.460Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:44:59.462Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:44:59.462Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:44:59.463Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:44:59.464Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:44:59.464Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:45:00.725Z] debug: <resources> memory: {"total":8214220800,"free":5860225024,"used":2353995776,"active":1085566976,"available":7128653824,"buffers":127631360,"cached":1418350592,"slab":159637504,"buffcache":1705619456,"reclaimable":72519680,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":24576}
+[2025-12-06T16:45:00.726Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721308672,"available":39218294784,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721308672,"available":39218294784,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:00.730Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721308672,"available":39218294784,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721308672,"available":39218294784,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:02.952Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:02.952Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:02.959Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721312768,"available":39218290688,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721312768,"available":39218290688,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:02.960Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721312768,"available":39218290688,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721312768,"available":39218290688,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:02.961Z] debug: <resources> memory: {"total":8214220800,"free":5859971072,"used":2354249728,"active":1085812736,"available":7128408064,"buffers":127639552,"cached":1418350592,"slab":159633408,"buffcache":1705623552,"reclaimable":72519680,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":229376}
+[2025-12-06T16:45:02.984Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:45:02.984Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:45:06.051Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:45:06.053Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:45:06.053Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:45:08.141Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:08.146Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:08.158Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721325056,"available":39218278400,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721325056,"available":39218278400,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:08.158Z] debug: <resources> memory: {"total":8214220800,"free":5859713024,"used":2354507776,"active":1086054400,"available":7128166400,"buffers":127647744,"cached":1418366976,"slab":159617024,"buffcache":1705631744,"reclaimable":72523776,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":65536}
+[2025-12-06T16:45:08.160Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721325056,"available":39218278400,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721325056,"available":39218278400,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:08.162Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:45:08.162Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:45:11.244Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721333248,"available":39218270208,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721333248,"available":39218270208,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:11.245Z] debug: <resources> memory: {"total":8214220800,"free":5858914304,"used":2355306496,"active":1086836736,"available":7127384064,"buffers":127655936,"cached":1418371072,"slab":159612928,"buffcache":1705639936,"reclaimable":72523776,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":131072}
+[2025-12-06T16:45:11.246Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721333248,"available":39218270208,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721333248,"available":39218270208,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:19.965Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:19.966Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:19.971Z] debug: <resources> memory: {"total":8214220800,"free":5858656256,"used":2355564544,"active":1087082496,"available":7127138304,"buffers":127664128,"cached":1418371072,"slab":159617024,"buffcache":1705652224,"reclaimable":72523776,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":110592}
+[2025-12-06T16:45:19.977Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721329152,"available":39218274304,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721329152,"available":39218274304,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:19.981Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721329152,"available":39218274304,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721329152,"available":39218274304,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:19.988Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:45:19.989Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:45:21.223Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:21.223Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:21.236Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721341440,"available":39218262016,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721341440,"available":39218262016,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:21.242Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721341440,"available":39218262016,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721341440,"available":39218262016,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:21.242Z] debug: <resources> memory: {"total":8214220800,"free":5855559680,"used":2358661120,"active":1090174976,"available":7124045824,"buffers":127664128,"cached":1418375168,"slab":159612928,"buffcache":1705652224,"reclaimable":72523776,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":122880}
+[2025-12-06T16:45:21.261Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:45:21.261Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:45:23.076Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:45:23.078Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:45:23.078Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:45:23.080Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:45:23.081Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:45:23.081Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:45:24.224Z] debug: <resources> memory: {"total":8214220800,"free":5855313920,"used":2358906880,"active":1090412544,"available":7123808256,"buffers":127672320,"cached":1418387456,"slab":159617024,"buffcache":1705676800,"reclaimable":72523776,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":135168}
+[2025-12-06T16:45:24.225Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721345536,"available":39218257920,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721345536,"available":39218257920,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:24.230Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721345536,"available":39218257920,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721345536,"available":39218257920,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:27.260Z] debug: <resources> memory: {"total":8214220800,"free":5855313920,"used":2358906880,"active":1090400256,"available":7123820544,"buffers":127672320,"cached":1418391552,"slab":159617024,"buffcache":1705680896,"reclaimable":72523776,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":110592}
+[2025-12-06T16:45:27.261Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721353728,"available":39218249728,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721353728,"available":39218249728,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:27.266Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721353728,"available":39218249728,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721353728,"available":39218249728,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:30.316Z] debug: <resources> memory: {"total":8214220800,"free":5854797824,"used":2359422976,"active":1090899968,"available":7123320832,"buffers":127680512,"cached":1418391552,"slab":159621120,"buffcache":1705693184,"reclaimable":72527872,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":118784}
+[2025-12-06T16:45:30.317Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721349632,"available":39218253824,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721349632,"available":39218253824,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:30.321Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721353728,"available":39218249728,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721353728,"available":39218249728,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:33.378Z] debug: <resources> memory: {"total":8214220800,"free":5859790848,"used":2354429952,"active":1085902848,"available":7128317952,"buffers":127680512,"cached":1418395648,"slab":159617024,"buffcache":1705693184,"reclaimable":72527872,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":102400}
+[2025-12-06T16:45:33.379Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721357824,"available":39218245632,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721357824,"available":39218245632,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:33.384Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721357824,"available":39218245632,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48394240,"available":466037018624,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721357824,"available":39218245632,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:36.432Z] debug: <resources> memory: {"total":8214220800,"free":5828493312,"used":2385727488,"active":1116221440,"available":7097999360,"buffers":127688704,"cached":1419292672,"slab":159895552,"buffcache":1706876928,"reclaimable":72679424,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":204800}
+[2025-12-06T16:45:36.433Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721357824,"available":39218245632,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721357824,"available":39218245632,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:36.437Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:39.499Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:39.500Z] debug: <resources> memory: {"total":8214220800,"free":5833326592,"used":2380894208,"active":1111191552,"available":7103029248,"buffers":127700992,"cached":1419472896,"slab":159936512,"buffcache":1707110400,"reclaimable":72683520,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":135168}
+[2025-12-06T16:45:39.505Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:42.561Z] debug: <resources> memory: {"total":8214220800,"free":5861068800,"used":2353152000,"active":1083244544,"available":7130976256,"buffers":127700992,"cached":1419677696,"slab":159903744,"buffcache":1707282432,"reclaimable":72687616,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":167936}
+[2025-12-06T16:45:42.562Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:42.567Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721361920,"available":39218241536,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:45:43.302Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:43.306Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:45:43.315Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:45:43.315Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:45:46.372Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:45:46.373Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:45:46.373Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:46:02.598Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:02.607Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:02.608Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721378304,"available":39218225152,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721378304,"available":39218225152,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:02.609Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721378304,"available":39218225152,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721378304,"available":39218225152,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:02.610Z] debug: <resources> memory: {"total":8214220800,"free":5858013184,"used":2356207616,"active":1086287872,"available":7127932928,"buffers":127705088,"cached":1419689984,"slab":159797248,"buffcache":1707192320,"reclaimable":72687616,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":57344}
+[2025-12-06T16:46:02.624Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:46:02.624Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:46:04.728Z] debug: <resources> memory: {"total":8214220800,"free":5857755136,"used":2356465664,"active":1086537728,"available":7127683072,"buffers":127713280,"cached":1419685888,"slab":159809536,"buffcache":1707208704,"reclaimable":72687616,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":237568}
+[2025-12-06T16:46:04.729Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721374208,"available":39218229248,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721374208,"available":39218229248,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:04.734Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721382400,"available":39218221056,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721382400,"available":39218221056,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:05.700Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:46:05.701Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:46:05.702Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:46:07.781Z] debug: <resources> memory: {"total":8214220800,"free":5856722944,"used":2357497856,"active":1087553536,"available":7126667264,"buffers":127713280,"cached":1419698176,"slab":159817728,"buffcache":1707229184,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":253952}
+[2025-12-06T16:46:07.782Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:07.787Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:10.829Z] debug: <resources> memory: {"total":8214220800,"free":5854916608,"used":2359304192,"active":1089347584,"available":7124873216,"buffers":127721472,"cached":1419702272,"slab":159813632,"buffcache":1707237376,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":270336}
+[2025-12-06T16:46:10.830Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:10.835Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:13.872Z] debug: <resources> memory: {"total":8214220800,"free":5851049984,"used":2363170816,"active":1093214208,"available":7121006592,"buffers":127721472,"cached":1419702272,"slab":159809536,"buffcache":1707233280,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":278528}
+[2025-12-06T16:46:13.872Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721386496,"available":39218216960,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:13.878Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721390592,"available":39218212864,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721390592,"available":39218212864,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:16.916Z] debug: <resources> memory: {"total":8214220800,"free":5850533888,"used":2363686912,"active":1093718016,"available":7120502784,"buffers":127725568,"cached":1419710464,"slab":159805440,"buffcache":1707241472,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":270336}
+[2025-12-06T16:46:16.917Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:16.922Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721398784,"available":39218204672,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721398784,"available":39218204672,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:19.969Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:19.969Z] debug: <resources> memory: {"total":8214220800,"free":5850533888,"used":2363686912,"active":1093718016,"available":7120502784,"buffers":127725568,"cached":1419710464,"slab":159805440,"buffcache":1707241472,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":278528}
+[2025-12-06T16:46:19.974Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:23.013Z] debug: <resources> memory: {"total":8214220800,"free":5850017792,"used":2364203008,"active":1094225920,"available":7119994880,"buffers":127733760,"cached":1419710464,"slab":159797248,"buffcache":1707241472,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":196608}
+[2025-12-06T16:46:23.014Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721394688,"available":39218208768,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:23.019Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721402880,"available":39218200576,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721402880,"available":39218200576,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:26.070Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:26.071Z] debug: <resources> memory: {"total":8214220800,"free":5849759744,"used":2364461056,"active":1094475776,"available":7119745024,"buffers":127733760,"cached":1419718656,"slab":159809536,"buffcache":1707261952,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":212992}
+[2025-12-06T16:46:26.075Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:28.743Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:28.748Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:28.759Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:28.759Z] debug: <resources> memory: {"total":8214220800,"free":5850370048,"used":2363850752,"active":1093861376,"available":7120359424,"buffers":127741952,"cached":1419722752,"slab":159809536,"buffcache":1707274240,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":253952}
+[2025-12-06T16:46:28.763Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721406976,"available":39218196480,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:28.780Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:46:28.780Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:46:31.727Z] debug: <resources> memory: {"total":8214220800,"free":5850533888,"used":2363686912,"active":1093685248,"available":7120535552,"buffers":127741952,"cached":1419726848,"slab":159805440,"buffcache":1707274240,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":249856}
+[2025-12-06T16:46:31.728Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721411072,"available":39218192384,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721411072,"available":39218192384,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:31.733Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721411072,"available":39218192384,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721411072,"available":39218192384,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:31.875Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:46:31.877Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:46:31.877Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:46:34.774Z] debug: <resources> memory: {"total":8214220800,"free":5850193920,"used":2364026880,"active":1094025216,"available":7120195584,"buffers":127750144,"cached":1419722752,"slab":159805440,"buffcache":1707278336,"reclaimable":72691712,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":90112}
+[2025-12-06T16:46:34.775Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721415168,"available":39218188288,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721415168,"available":39218188288,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:34.779Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721415168,"available":39218188288,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721415168,"available":39218188288,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:48.498Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:48.503Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:48.506Z] debug: <resources> memory: {"total":8214220800,"free":5571956736,"used":2642264064,"active":1311772672,"available":6902448128,"buffers":137936896,"cached":1539452928,"slab":170057728,"buffcache":1847447552,"reclaimable":80187392,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":2781184}
+[2025-12-06T16:46:48.508Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721435648,"available":39218167808,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721435648,"available":39218167808,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:48.511Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721439744,"available":39218163712,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721439744,"available":39218163712,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:48.522Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:46:48.522Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:46:49.955Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:49.956Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:46:49.961Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721439744,"available":39218163712,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721439744,"available":39218163712,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:49.962Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721439744,"available":39218163712,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721439744,"available":39218163712,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:49.963Z] debug: <resources> memory: {"total":8214220800,"free":5595992064,"used":2618228736,"active":1287720960,"available":6926499840,"buffers":137936896,"cached":1539457024,"slab":170082304,"buffcache":1847476224,"reclaimable":80191488,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":2793472}
+[2025-12-06T16:46:49.985Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:46:49.986Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:46:51.588Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:46:51.590Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:46:51.590Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:46:51.592Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:46:51.592Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:46:51.592Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:46:52.927Z] debug: <resources> memory: {"total":8214220800,"free":5610905600,"used":2603315200,"active":1272782848,"available":6941437952,"buffers":137940992,"cached":1539469312,"slab":170135552,"buffcache":1847545856,"reclaimable":80203776,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":2805760}
+[2025-12-06T16:46:52.927Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721447936,"available":39218155520,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721447936,"available":39218155520,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:46:52.931Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18721447936,"available":39218155520,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18721447936,"available":39218155520,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:22.937Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:47:22.944Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:47:22.947Z] debug: <resources> memory: {"total":8214220800,"free":5550235648,"used":2663985152,"active":1328504832,"available":6885715968,"buffers":138289152,"cached":1544380416,"slab":170315776,"buffcache":1852985344,"reclaimable":80531456,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":770048}
+[2025-12-06T16:47:22.950Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722193408,"available":39217410048,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722193408,"available":39217410048,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:22.955Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722193408,"available":39217410048,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722193408,"available":39217410048,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:22.963Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:47:22.963Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:47:25.744Z] debug: <resources> memory: {"total":8214220800,"free":5549465600,"used":2664755200,"active":1329270784,"available":6884950016,"buffers":138289152,"cached":1544388608,"slab":170274816,"buffcache":1852952576,"reclaimable":80531456,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":786432}
+[2025-12-06T16:47:25.745Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722197504,"available":39217405952,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722197504,"available":39217405952,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:25.751Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722201600,"available":39217401856,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722201600,"available":39217401856,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:25.975Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:47:25.981Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:47:25.992Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722201600,"available":39217401856,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722201600,"available":39217401856,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:25.996Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722201600,"available":39217401856,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722201600,"available":39217401856,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:25.996Z] debug: <resources> memory: {"total":8214220800,"free":5548867584,"used":2665353216,"active":1329860608,"available":6884360192,"buffers":138289152,"cached":1544392704,"slab":170274816,"buffcache":1852956672,"reclaimable":80531456,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":790528}
+[2025-12-06T16:47:26.015Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:47:26.015Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:47:26.019Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:47:26.020Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:47:26.020Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:47:26.020Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:47:26.021Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:47:26.021Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:47:28.972Z] debug: <resources> memory: {"total":8214220800,"free":5555412992,"used":2658807808,"active":1323343872,"available":6890876928,"buffers":138297344,"cached":1544404992,"slab":169992192,"buffcache":1852694528,"reclaimable":80445440,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":438272}
+[2025-12-06T16:47:28.973Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722213888,"available":39217389568,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722213888,"available":39217389568,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:28.978Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722217984,"available":39217385472,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722217984,"available":39217385472,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:32.015Z] debug: <resources> memory: {"total":8214220800,"free":5555544064,"used":2658676736,"active":1323208704,"available":6891012096,"buffers":138297344,"cached":1544404992,"slab":169967616,"buffcache":1852669952,"reclaimable":80445440,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":446464}
+[2025-12-06T16:47:32.016Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722217984,"available":39217385472,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722217984,"available":39217385472,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:32.020Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722217984,"available":39217385472,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722217984,"available":39217385472,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:35.079Z] debug: <resources> memory: {"total":8214220800,"free":5559586816,"used":2654633984,"active":1319157760,"available":6895063040,"buffers":138305536,"cached":1544404992,"slab":169897984,"buffcache":1852608512,"reclaimable":80445440,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":327680}
+[2025-12-06T16:47:35.080Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722213888,"available":39217389568,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722213888,"available":39217389568,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:35.085Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722222080,"available":39217381376,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722222080,"available":39217381376,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:38.035Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:47:38.042Z] debug: <resources> memory: {"total":8214220800,"free":5559881728,"used":2654339072,"active":1318850560,"available":6895370240,"buffers":138305536,"cached":1544417280,"slab":169893888,"buffcache":1852616704,"reclaimable":80445440,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":348160}
+[2025-12-06T16:47:38.043Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722226176,"available":39217377280,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722226176,"available":39217377280,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:38.048Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:47:38.050Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722226176,"available":39217377280,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722226176,"available":39217377280,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:47:38.059Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:47:38.060Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:47:41.123Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:47:41.125Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:47:41.125Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:48:50.466Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:48:50.472Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722234368,"available":39217369088,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722234368,"available":39217369088,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:48:50.474Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722234368,"available":39217369088,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722234368,"available":39217369088,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:48:50.475Z] debug: <resources> memory: {"total":8214220800,"free":5560963072,"used":2653257728,"active":1317675008,"available":6896545792,"buffers":138395648,"cached":1544437760,"slab":169897984,"buffcache":1852731392,"reclaimable":80437248,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":40960}
+[2025-12-06T16:48:50.478Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:48:50.490Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:48:50.490Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:48:53.537Z] debug: <resources> memory: {"total":8214220800,"free":5559414784,"used":2654806016,"active":1319194624,"available":6895026176,"buffers":138395648,"cached":1544454144,"slab":169914368,"buffcache":1852764160,"reclaimable":80453632,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":86016}
+[2025-12-06T16:48:53.538Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722238464,"available":39217364992,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722238464,"available":39217364992,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:48:53.542Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722238464,"available":39217364992,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722238464,"available":39217364992,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:48:53.571Z] error: <httpProxy> Error calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info...
+[2025-12-06T16:48:53.573Z] error: <httpProxy> [
+  500,
+  Error: connect EHOSTUNREACH 192.168.1.115:8080
+      at <unknown> (Error: connect EHOSTUNREACH 192.168.1.115:8080) {
+    errno: -113,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '192.168.1.115',
+    port: 8080
+  }
+]
+[2025-12-06T16:48:53.573Z] error: <credentialedProxyHandler> HTTP Error 500 calling http://192.168.1.115:8080/ocs/v2.php/apps/serverinfo/api/v1/info?format=json
+[2025-12-06T16:48:56.603Z] debug: <resources> memory: {"total":8214220800,"free":5558382592,"used":2655838208,"active":1320218624,"available":6894002176,"buffers":138399744,"cached":1544462336,"slab":169906176,"buffcache":1852768256,"reclaimable":80449536,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":4096,"dirty":110592}
+[2025-12-06T16:48:56.604Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722246656,"available":39217356800,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722246656,"available":39217356800,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:48:56.610Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722250752,"available":39217352704,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722250752,"available":39217352704,"use":32.31,"mount":"/app/config","rw":true}]
+[2025-12-06T16:56:15.286Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:56:15.288Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:56:15.307Z] debug: <resources> memory: {"total":8214220800,"free":5500203008,"used":2714017792,"active":1326039040,"available":6888181760,"buffers":139472896,"cached":1595158528,"slab":171245568,"buffcache":1905876992,"reclaimable":81629184,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":860160}
+[2025-12-06T16:56:15.310Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722295808,"available":39217307648,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722295808,"available":39217307648,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T16:56:15.320Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722295808,"available":39217307648,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722295808,"available":39217307648,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T16:56:15.337Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:56:15.339Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:56:15.557Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:56:15.558Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:56:15.853Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:56:15.859Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T16:56:15.879Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722308096,"available":39217295360,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722308096,"available":39217295360,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T16:56:15.880Z] debug: <resources> memory: {"total":8214220800,"free":5421498368,"used":2792722432,"active":1404596224,"available":6809624576,"buffers":139481088,"cached":1595691008,"slab":171266048,"buffcache":1906438144,"reclaimable":81629184,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":876544}
+[2025-12-06T16:56:15.884Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722308096,"available":39217295360,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722308096,"available":39217295360,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T16:56:15.912Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T16:56:15.912Z] debug: No containers were found with homepage labels.
+[2025-12-06T16:56:18.857Z] debug: <resources> memory: {"total":8214220800,"free":5424459776,"used":2789761024,"active":1401700352,"available":6812520448,"buffers":139489280,"cached":1595625472,"slab":171286528,"buffcache":1906401280,"reclaimable":81629184,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":245760}
+[2025-12-06T16:56:18.859Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722308096,"available":39217295360,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722308096,"available":39217295360,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T16:56:18.863Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722312192,"available":39217291264,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722312192,"available":39217291264,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":48939008,"available":466036473856,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:27.222Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T17:37:27.223Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T17:37:27.233Z] debug: <resources> memory: {"total":8214220800,"free":5311143936,"used":2903076864,"active":1504272384,"available":6709948416,"buffers":142155776,"cached":1603256320,"slab":172371968,"buffcache":1917784064,"reclaimable":82575360,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":86016}
+[2025-12-06T17:37:27.242Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722406400,"available":39217197056,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722406400,"available":39217197056,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:27.249Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722406400,"available":39217197056,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722406400,"available":39217197056,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:27.259Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T17:37:27.259Z] debug: No containers were found with homepage labels.
+[2025-12-06T17:37:30.256Z] debug: <resources> memory: {"total":8214220800,"free":5364994048,"used":2849226752,"active":1450356736,"available":6763864064,"buffers":142163968,"cached":1603301376,"slab":172388352,"buffcache":1917853696,"reclaimable":82575360,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":151552}
+[2025-12-06T17:37:30.299Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722414592,"available":39217188864,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722414592,"available":39217188864,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:30.304Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722414592,"available":39217188864,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722414592,"available":39217188864,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:33.283Z] debug: <resources> memory: {"total":8214220800,"free":5411299328,"used":2802921472,"active":1404043264,"available":6810177536,"buffers":142172160,"cached":1603305472,"slab":172388352,"buffcache":1917865984,"reclaimable":82575360,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":73728}
+[2025-12-06T17:37:33.368Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722418688,"available":39217184768,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722418688,"available":39217184768,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:33.380Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722418688,"available":39217184768,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722418688,"available":39217184768,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:37.453Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T17:37:37.458Z] error: <dockerStatusService> Error: connect EACCES /var/run/docker.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+    at PipeConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+[2025-12-06T17:37:37.470Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722422784,"available":39217180672,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722422784,"available":39217180672,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:37.471Z] debug: <resources> memory: {"total":8214220800,"free":5449773056,"used":2764447744,"active":1365565440,"available":6848655360,"buffers":142172160,"cached":1603305472,"slab":172388352,"buffcache":1917865984,"reclaimable":82575360,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":81920}
+[2025-12-06T17:37:37.472Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722422784,"available":39217180672,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722422784,"available":39217180672,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:37.475Z] debug: No containers were found with homepage labels.
+[2025-12-06T17:37:37.475Z] error: <service-helpers> Error getting services from Docker server 'my-docker': [Error: connect EACCES /var/run/docker.sock] {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '/var/run/docker.sock'
+}
+[2025-12-06T17:37:40.546Z] debug: <resources> memory: {"total":8214220800,"free":5463502848,"used":2750717952,"active":1351827456,"available":6862393344,"buffers":142176256,"cached":1603309568,"slab":172392448,"buffcache":1917878272,"reclaimable":82575360,"swaptotal":8589926400,"swapused":0,"swapfree":8589926400,"writeback":0,"dirty":98304}
+[2025-12-06T17:37:40.547Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722422784,"available":39217180672,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722422784,"available":39217180672,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
+[2025-12-06T17:37:40.552Z] debug: <resources> fsSize: [{"fs":"overlay","type":"overlay","size":61075263488,"used":18722426880,"available":39217176576,"use":32.31,"mount":"/","rw":false},{"fs":"/dev/mapper/ubuntu--vg-ubuntu--lv","type":"ext4","size":61075263488,"used":18722426880,"available":39217176576,"use":32.31,"mount":"/app/config","rw":true},{"fs":"/dev/sdb","type":"ext4","size":491107581952,"used":50036736,"available":466035376128,"use":0.01,"mount":"/mnt/ssd_storage","rw":false}]
