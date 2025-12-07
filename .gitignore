@@ -2,3 +2,6 @@
 jellyfin/config/
 jellyfin/cache/
 homepage/.env
+# Ігнорувати логи Homepage
+homepage/config/logs/
+*.log
