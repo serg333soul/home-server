@@ -19,3 +19,11 @@
         description: "Відео"
         server: my-docker
         container: jellyfin
+
+- "Інфраструктура":
+    - Grafana:
+        icon: grafana.png
+        href: "http://100.100.84.4:3001/" # Ваша Tailscale IP + порт 3001
+        description: "Моніторинг Сервера"
+        server: my-docker
+        container: grafana

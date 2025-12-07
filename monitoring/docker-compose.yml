@@ -1,0 +1,53 @@
+services:
+  # 1. NODE EXPORTER (Збирає дані про залізо)
+  node_exporter:
+    image: prom/node-exporter:latest
+    container_name: node_exporter
+    restart: unless-stopped
+    volumes:
+      # Магія: ми прокидаємо системні папки Linux всередину контейнера,
+      # щоб він бачив реальне навантаження хоста, а не своє власне.
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+
+  # 2. PROMETHEUS (Збирає та зберігає метрики)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    restart: unless-stopped
+    volumes:
+      # Підключаємо наш конфіг
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      # Створюємо сховище для історії даних
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    ports:
+      - 9090:9090 # Порт веб-інтерфейсу Prometheus (для налагодження)
+
+  # 3. GRAFANA (Малює графіки)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - 3001:3000 # ВАЖЛИВО: Порт 3000 зайнятий Homepage, тому Grafana буде на 3001
+    volumes:
+      - grafana_data:/var/lib/grafana # Щоб налаштування не зникали після перезапуску
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin # Змінимо при першому вході
+
+volumes:
+  prometheus_data:
+  grafana_data:
