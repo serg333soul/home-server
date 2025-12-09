@@ -1,37 +1,41 @@
 #!/bin/bash
 
 # ==========================================
-# SCRIPT: Tier 1 Backup to Google Drive (SMART VERSION)
-# DESCRIPTION: Syncs files, but moves deleted items to a history folder
+# SCRIPT: Tier 1 Backup to Google Drive
+# AUTHOR: Serg Ruban
+# DESCRIPTION: Automates backup with Security & Syntax Best Practices
 # ==========================================
 
-# --- НАЛАШТУВАННЯ ОТОЧЕННЯ ---
+# --- НАЛАШТУВАННЯ ОТОЧЕННЯ (БЕЗПЕКА FIX - SC2046) ---
+# Замість grep/xargs використовуємо нативний source
 ENV_FILE="/home/ruban/nextcloud/.env"
+
 if [ -f "$ENV_FILE" ]; then
-    export $(grep -v '^#' "$ENV_FILE" | xargs)
+    set -a # Вмикаємо автоматичний експорт змінних
+    # shellcheck source=/dev/null
+    source "$ENV_FILE"
+    set +a # Вимикаємо
 else
-    echo "CRITICAL: .env файл не знайдено!"
+    echo "CRITICAL: .env файл не знайдено! Паролі відсутні."
     exit 1
 fi
 
 # --- ЗМІННІ ---
 TIMESTAMP=$(date +"%d.%m.%Y_%H-%M")
-DATE_ONLY=$(date +"%Y-%m-%d") # Тільки дата для папки архіву
+DATE_ONLY=$(date +"%Y-%m-%d")
 LOG_FILE="/var/log/backup_cloud.log"
 
-# Головна папка в хмарі
 RCLONE_REMOTE="gdrive:HomeServer_Tier1"
-# Папка для "сміття" (Історія видалених файлів)
-# Структура буде: HomeServer_Tier1/_History/2025-12-07/...
 RCLONE_HISTORY_DIR="$RCLONE_REMOTE/_History/$DATE_ONLY"
 
 # --- ПРОГРАМИ ---
 RCLONE_BIN=$(which rclone || echo "/usr/bin/rclone")
 RCLONE_CONFIG="/home/ruban/.config/rclone/rclone.conf"
 
-# --- ШЛЯХИ ДО ДАНИХ ---
+# --- ШЛЯХИ ---
 PATH_CONFIGS="/home/ruban/nextcloud"
 PATH_DOCS="/mnt/ssd_storage/Admin_Files/Documents"
+PATH_WIFE_DOCS="/mnt/ssd_storage/Wife_Files/Documents"
 PATH_DB_DUMP="/mnt/ssd_storage/Database_Backup"
 
 # --- БАЗА ДАНИХ ---
@@ -39,7 +43,6 @@ DB_CONTAINER="nextcloud-db-1"
 DB_USER="nextcloud"
 DB_PASS="${MYSQL_PASSWORD:?Error: MYSQL_PASSWORD not set in .env}"
 
-# --- ЛОГУВАННЯ ---
 log() {
     echo "[$TIMESTAMP] | $1" >> "$LOG_FILE"
     echo "$1"
@@ -47,7 +50,6 @@ log() {
 
 log "INFO | --- Початок SMART бекапу ---"
 
-# --- ПЕРЕВІРКИ ---
 if [ ! -f "$RCLONE_CONFIG" ]; then
     log "CRITICAL | Конфіг Rclone не знайдено!"
     exit 1
@@ -60,16 +62,16 @@ docker exec "$DB_CONTAINER" mariadb-dump -u "$DB_USER" -p"$DB_PASS" nextcloud | 
 
 if [ ${PIPESTATUS[0]} -eq 0 ]; then
     log "SUCCESS | Дамп створено."
-    $RCLONE_BIN --config "$RCLONE_CONFIG" copy "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz" "$RCLONE_REMOTE/Database"
+    # FIX SC2086: Взяли $RCLONE_BIN у лапки
+    "$RCLONE_BIN" --config "$RCLONE_CONFIG" copy "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz" "$RCLONE_REMOTE/Database"
     find "$PATH_DB_DUMP" -name "*.sql.gz" -mtime +7 -delete
 else
     log "ERROR | Помилка дампа бази!"
 fi
 
-# 2. БЕКАП КОНФІГІВ (З захистом від видалення)
+# 2. БЕКАП КОНФІГІВ
 log "INFO | Синхронізація конфігурації..."
-# Якщо файл видалено локально, в хмарі він переміститься в _History/2025-12-07/Configs
-$RCLONE_BIN --config "$RCLONE_CONFIG" sync "$PATH_CONFIGS" "$RCLONE_REMOTE/Configs" \
+"$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_CONFIGS" "$RCLONE_REMOTE/Configs" \
     --backup-dir "$RCLONE_HISTORY_DIR/Configs" \
     --exclude ".git/**" \
     --exclude "nextcloud_data/**" \
@@ -78,15 +80,22 @@ $RCLONE_BIN --config "$RCLONE_CONFIG" sync "$PATH_CONFIGS" "$RCLONE_REMOTE/Confi
     --exclude "**/.DS_Store" \
     --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
 
-# 3. БЕКАП ДОКУМЕНТІВ (З захистом від видалення)
-log "INFO | Синхронізація документів..."
+# 3. БЕКАП ДОКУМЕНТІВ (ADMIN)
+log "INFO | Синхронізація документів (Admin)..."
 if [ -d "$PATH_DOCS" ]; then
-    # Якщо файл видалено локально, в хмарі він переміститься в _History/2025-12-07/Documents
-    $RCLONE_BIN --config "$RCLONE_CONFIG" sync "$PATH_DOCS" "$RCLONE_REMOTE/Documents" \
+    "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_DOCS" "$RCLONE_REMOTE/Documents" \
         --backup-dir "$RCLONE_HISTORY_DIR/Documents" \
         --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
 else
-    log "WARNING | Папка документів не знайдена."
+    log "WARNING | Папка документів Admin не знайдена."
+fi
+
+# 4. БЕКАП ДОКУМЕНТІВ (WIFE)
+log "INFO | Синхронізація документів (Wife)..."
+if [ -d "$PATH_WIFE_DOCS" ]; then
+    "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_WIFE_DOCS" "$RCLONE_REMOTE/Documents_Wife" \
+        --backup-dir "$RCLONE_HISTORY_DIR/Documents_Wife" \
+        --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
 fi
 
 log "INFO | --- Бекап завершено ---"
