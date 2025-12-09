@@ -17,7 +17,7 @@ process_user_files() {
 
     # 1. AUTO-PROVISIONING
     if [ ! -d "$DEST_DIR" ]; then
-        # FIX SC2155: Оголошуємо змінну окремо від присвоєння
+        # FIX SC2155: Оголошуємо змінну окремо від команди
         local INIT_TIMESTAMP
         INIT_TIMESTAMP=$(date "+%d.%m.%Y %H:%M")
         
