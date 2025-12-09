@@ -17,8 +17,10 @@ process_user_files() {
 
     # 1. AUTO-PROVISIONING
     if [ ! -d "$DEST_DIR" ]; then
-        # FIX: Додали TIMESTAMP, щоб не було помилки, якщо він ще не оголошений
-        local INIT_TIMESTAMP=$(date "+%d.%m.%Y %H:%M")
+        # FIX SC2155: Оголошуємо змінну окремо від присвоєння
+        local INIT_TIMESTAMP
+        INIT_TIMESTAMP=$(date "+%d.%m.%Y %H:%M")
+        
         echo "[$INIT_TIMESTAMP] | INIT | Створення нової структури для користувача $NC_USER" >> "$LOG_FILE"
         mkdir -p "$DEST_DIR/Photos"
         mkdir -p "$DEST_DIR/Videos"
@@ -49,8 +51,6 @@ process_user_files() {
             TARGET_DIR="$DEST_DIR/$SUBFOLDER"
             mkdir -p "$TARGET_DIR"
 
-            # FIX SC2181: Перевірка без $?
-            # Ми кажемо: ЯКЩО (переміщення ОК) І (зміна власника ОК), ТОДІ...
             if mv "$file" "$TARGET_DIR/" && chown "$LINUX_OWNER:$LINUX_OWNER" "$TARGET_DIR/$FILENAME"; then
                 echo "[$TIMESTAMP] | $USER_LABEL | $FILESIZE | $FILENAME" >> "$LOG_FILE"
                 ((MOVED_COUNTER++)) 

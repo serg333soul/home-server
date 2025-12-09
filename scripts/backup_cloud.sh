@@ -6,15 +6,14 @@
 # DESCRIPTION: Automates backup with Security & Syntax Best Practices
 # ==========================================
 
-# --- НАЛАШТУВАННЯ ОТОЧЕННЯ (БЕЗПЕКА FIX - SC2046) ---
-# Замість grep/xargs використовуємо нативний source
+# --- НАЛАШТУВАННЯ ОТОЧЕННЯ ---
 ENV_FILE="/home/ruban/nextcloud/.env"
 
 if [ -f "$ENV_FILE" ]; then
-    set -a # Вмикаємо автоматичний експорт змінних
+    set -a
     # shellcheck source=/dev/null
     source "$ENV_FILE"
-    set +a # Вимикаємо
+    set +a
 else
     echo "CRITICAL: .env файл не знайдено! Паролі відсутні."
     exit 1
@@ -62,7 +61,7 @@ docker exec "$DB_CONTAINER" mariadb-dump -u "$DB_USER" -p"$DB_PASS" nextcloud | 
 
 if [ ${PIPESTATUS[0]} -eq 0 ]; then
     log "SUCCESS | Дамп створено."
-    # FIX SC2086: Взяли $RCLONE_BIN у лапки
+    # FIX SC2086: Лапки додано тут
     "$RCLONE_BIN" --config "$RCLONE_CONFIG" copy "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz" "$RCLONE_REMOTE/Database"
     find "$PATH_DB_DUMP" -name "*.sql.gz" -mtime +7 -delete
 else
@@ -71,6 +70,7 @@ fi
 
 # 2. БЕКАП КОНФІГІВ
 log "INFO | Синхронізація конфігурації..."
+# FIX SC2086: Лапки додано тут
 "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_CONFIGS" "$RCLONE_REMOTE/Configs" \
     --backup-dir "$RCLONE_HISTORY_DIR/Configs" \
     --exclude ".git/**" \
@@ -83,6 +83,7 @@ log "INFO | Синхронізація конфігурації..."
 # 3. БЕКАП ДОКУМЕНТІВ (ADMIN)
 log "INFO | Синхронізація документів (Admin)..."
 if [ -d "$PATH_DOCS" ]; then
+    # FIX SC2086: Лапки додано тут
     "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_DOCS" "$RCLONE_REMOTE/Documents" \
         --backup-dir "$RCLONE_HISTORY_DIR/Documents" \
         --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
@@ -93,6 +94,7 @@ fi
 # 4. БЕКАП ДОКУМЕНТІВ (WIFE)
 log "INFO | Синхронізація документів (Wife)..."
 if [ -d "$PATH_WIFE_DOCS" ]; then
+    # FIX SC2086: Лапки додано тут
     "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_WIFE_DOCS" "$RCLONE_REMOTE/Documents_Wife" \
         --backup-dir "$RCLONE_HISTORY_DIR/Documents_Wife" \
         --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
