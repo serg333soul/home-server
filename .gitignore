@@ -5,3 +5,4 @@ homepage/.env
 # Ігнорувати логи Homepage
 homepage/config/logs/
 *.log
+actions-runner/

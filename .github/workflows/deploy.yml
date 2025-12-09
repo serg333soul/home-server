@@ -1,0 +1,35 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  test-scripts:
+    name: 🛡️ Security & Syntax Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './scripts'
+
+  deploy:
+    name: 🚀 Deploy to Home Server
+    needs: test-scripts
+    runs-on: self-hosted
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Update Scripts
+        run: |
+          echo "📥 Отримуємо оновлення..."
+          cp -rv scripts/* /home/ruban/nextcloud/scripts/
+          chmod +x /home/ruban/nextcloud/scripts/*.sh
+          echo "✅ Скрипти оновлено успішно!"
