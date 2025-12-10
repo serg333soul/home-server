@@ -59,7 +59,7 @@ mkdir -p "$PATH_DB_DUMP"
 log "INFO | Створення дампа бази..."
 docker exec "$DB_CONTAINER" mariadb-dump -u "$DB_USER" -p "$DB_PASS" nextcloud | gzip > "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz"
 
-if [ ${PIPESTATUS[0]} -eq 0 ]; then
+if [ "${PIPESTATUS[0]}" -eq 0 ]; then
     log "SUCCESS | Дамп створено."
     # FIX SC2086: Лапки додано тут
     "$RCLONE_BIN" --config "$RCLONE_CONFIG" copy "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz" "$RCLONE_REMOTE/Database"
