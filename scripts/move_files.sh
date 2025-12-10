@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # --- FIX FOR CRON: Додаємо шляхи до системних програм ---
-# Завдяки цьому рядку скрипт знайде і docker, і awk, і grep
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 # --- ГЛОБАЛЬНІ НАЛАШТУВАННЯ ---
@@ -64,14 +63,12 @@ process_user_files() {
     done
 
     if [ $MOVED_COUNTER -gt 0 ]; then
-        # Тут використовуємо звичайний docker (PATH зверху допоможе його знайти)
         docker exec -u 33 nextcloud-app-1 php occ files:scan --path="/$NC_USER/files/MobileUploads" > /dev/null 2>&1
         echo "[$TIMESTAMP] | INFO | Базу оновлено ($MOVED_COUNTER файлів) для $USER_LABEL" >> "$LOG_FILE"
     fi
 }
 
 # --- ДИНАМІЧНИЙ ЗАПУСК ---
-# Тут була помилка. Тепер ми використовуємо просто docker, бо PATH налаштований.
 mapfile -t ALL_NC_USERS < <(docker exec -u 33 nextcloud-app-1 php occ user:list | cut -d: -f1 | tr -d ' ')
 
 for NC_USER in "${ALL_NC_USERS[@]}"; do
