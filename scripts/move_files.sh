@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- FIX FOR CRON: Додаємо шляхи до системних програм ---
-# Це найважливіший рядок для роботи автоматики!
+# Завдяки цьому рядку скрипт знайде і docker, і awk, і grep
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 # --- ГЛОБАЛЬНІ НАЛАШТУВАННЯ ---
@@ -21,7 +21,6 @@ process_user_files() {
 
     # 1. AUTO-PROVISIONING
     if [ ! -d "$DEST_DIR" ]; then
-        # FIX SC2155: Оголошуємо змінну окремо
         local INIT_TIMESTAMP
         INIT_TIMESTAMP=$(date "+%d.%m.%Y %H:%M")
         
@@ -65,14 +64,14 @@ process_user_files() {
     done
 
     if [ $MOVED_COUNTER -gt 0 ]; then
-        # Тут тепер docker гарантовано знайдеться завдяки PATH зверху
+        # Тут використовуємо звичайний docker (PATH зверху допоможе його знайти)
         docker exec -u 33 nextcloud-app-1 php occ files:scan --path="/$NC_USER/files/MobileUploads" > /dev/null 2>&1
         echo "[$TIMESTAMP] | INFO | Базу оновлено ($MOVED_COUNTER файлів) для $USER_LABEL" >> "$LOG_FILE"
     fi
 }
 
 # --- ДИНАМІЧНИЙ ЗАПУСК ---
-# Тут тепер docker гарантовано знайдеться завдяки PATH зверху
+# Тут була помилка. Тепер ми використовуємо просто docker, бо PATH налаштований.
 mapfile -t ALL_NC_USERS < <(docker exec -u 33 nextcloud-app-1 php occ user:list | cut -d: -f1 | tr -d ' ')
 
 for NC_USER in "${ALL_NC_USERS[@]}"; do
