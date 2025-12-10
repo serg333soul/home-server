@@ -28,7 +28,7 @@ RCLONE_REMOTE="gdrive:HomeServer_Tier1"
 RCLONE_HISTORY_DIR="$RCLONE_REMOTE/_History/$DATE_ONLY"
 
 # --- ПРОГРАМИ ---
-RCLONE_BIN=$(which rclone || echo "/usr/bin/rclone")
+RCLONE_BIN="$(which rclone || echo /usr/bin/rclone)"
 RCLONE_CONFIG="/home/ruban/.config/rclone/rclone.conf"
 
 # --- ШЛЯХИ ---
@@ -62,7 +62,7 @@ docker exec "$DB_CONTAINER" mariadb-dump -u "$DB_USER" -p "$DB_PASS" nextcloud |
 if [ ${PIPESTATUS[0]} -eq 0 ]; then
     log "SUCCESS | Дамп створено."
     # FIX SC2086: Лапки додано тут
-    "$RCLONE_BIN --config" "$RCLONE_CONFIG" copy "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz" "$RCLONE_REMOTE/Database"
+    "$RCLONE_BIN" --config "$RCLONE_CONFIG" copy "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz" "$RCLONE_REMOTE/Database"
     find "$PATH_DB_DUMP" -name "*.sql.gz" -mtime +7 -delete
 else
     log "ERROR | Помилка дампа бази!"
