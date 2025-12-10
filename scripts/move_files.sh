@@ -69,7 +69,8 @@ process_user_files() {
 }
 
 # --- ДИНАМІЧНИЙ ЗАПУСК ---
-mapfile -t ALL_NC_USERS < <(docker exec -u 33 nextcloud-app-1 php occ user:list | cut -d: -f1 | tr -d ' ')
+# FIX: sed видаляє пробіли і дефіси на початку
+mapfile -t ALL_NC_USERS < <(docker exec -u 33 nextcloud-app-1 php occ user:list | awk -F: '{print $1}' | sed 's/^[[:space:]-]*//')
 
 for NC_USER in "${ALL_NC_USERS[@]}"; do
     if [[ -z "$NC_USER" ]]; then continue; fi
