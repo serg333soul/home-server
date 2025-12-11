@@ -4,16 +4,17 @@
 # SCRIPT: Telegram Notification Utility
 # DESCRIPTION: Відправляє повідомлення в Телеграм
 # USAGE: ./notify.sh "Текст повідомлення" "STATUS"
-# STATUS options: INFO (default), SUCCESS, ERROR, WARNING
 # ========================================================
 
 MESSAGE="$1"
-TYPE="${2:-INFO}" # За замовчуванням тип INFO
+TYPE="${2:-INFO}"
 
 # 1. Завантаження секретів
 ENV_FILE="/home/ruban/nextcloud/.env"
 if [ -f "$ENV_FILE" ]; then
     set -a
+    # FIX SC1090: Кажемо ShellCheck ігнорувати невідоме джерело
+    # shellcheck source=/dev/null
     source "$ENV_FILE"
     set +a
 else
@@ -35,8 +36,7 @@ case "$TYPE" in
     *)         ICON="ℹ️ ІНФО" ;;
 esac
 
-# 4. Форматування (Markdown)
-# %0A - це символ переносу рядка для URL
+# 4. Форматування
 FULL_TEXT="*Server Notification* [Home]%0A--------------------------------%0A*$ICON*%0A$MESSAGE"
 
 # 5. Відправка
