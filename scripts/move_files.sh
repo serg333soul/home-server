@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# --- FIX FOR CRON: Додаємо шляхи до системних програм ---
+# --- FIX FOR CRON ---
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 # --- ГЛОБАЛЬНІ НАЛАШТУВАННЯ ---
 LOG_FILE="/var/log/file_transfer.log"
 NEXTCLOUD_DATA_ROOT="/var/lib/docker/volumes/nextcloud_nextcloud_data/_data/data"
 BASE_SSD_PATH="/mnt/ssd_storage"
+NOTIFY_SCRIPT="/home/ruban/nextcloud/scripts/notify.sh"
 
 # --- ФУНКЦІЯ ОБРОБКИ ---
 process_user_files() {
@@ -57,19 +58,25 @@ process_user_files() {
                 echo "[$TIMESTAMP] | $USER_LABEL | $FILESIZE | $FILENAME" >> "$LOG_FILE"
                 ((MOVED_COUNTER++)) 
             else
-                echo "[$TIMESTAMP] | ПОМИЛКА | $USER_LABEL | Не вдалося перемістити $FILENAME" >> "$LOG_FILE"
+                MSG="ПОМИЛКА | $USER_LABEL | Не вдалося перемістити $FILENAME"
+                echo "[$TIMESTAMP] | $MSG" >> "$LOG_FILE"
+                # Термінове сповіщення про помилку
+                "$NOTIFY_SCRIPT" "🚨 $MSG" "ERROR"
             fi
         fi
     done
 
     if [ $MOVED_COUNTER -gt 0 ]; then
+        # Оновлення бази
         docker exec -u 33 nextcloud-app-1 php occ files:scan --path="/$NC_USER/files/MobileUploads" > /dev/null 2>&1
         echo "[$TIMESTAMP] | INFO | Базу оновлено ($MOVED_COUNTER файлів) для $USER_LABEL" >> "$LOG_FILE"
+        
+        # СПОВІЩЕННЯ В ТЕЛЕГРАМ (Тільки якщо були файли)
+        "$NOTIFY_SCRIPT" "📂 **Сортування завершено!**%0AКористувач: $USER_LABEL%0AПереміщено файлів: $MOVED_COUNTER" "SUCCESS"
     fi
 }
 
 # --- ДИНАМІЧНИЙ ЗАПУСК ---
-# FIX: sed видаляє пробіли і дефіси на початку
 mapfile -t ALL_NC_USERS < <(docker exec -u 33 nextcloud-app-1 php occ user:list | awk -F: '{print $1}' | sed 's/^[[:space:]-]*//')
 
 for NC_USER in "${ALL_NC_USERS[@]}"; do

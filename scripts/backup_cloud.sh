@@ -3,11 +3,12 @@
 # ==========================================
 # SCRIPT: Tier 1 Backup to Google Drive
 # AUTHOR: Serg Ruban
-# DESCRIPTION: Automates backup with Security & Syntax Best Practices
+# DESCRIPTION: Automates backup + Telegram Notifications
 # ==========================================
 
 # --- НАЛАШТУВАННЯ ОТОЧЕННЯ ---
 ENV_FILE="/home/ruban/nextcloud/.env"
+NOTIFY_SCRIPT="/home/ruban/nextcloud/scripts/notify.sh"
 
 if [ -f "$ENV_FILE" ]; then
     set -a
@@ -15,7 +16,7 @@ if [ -f "$ENV_FILE" ]; then
     source "$ENV_FILE"
     set +a
 else
-    echo "CRITICAL: .env файл не знайдено! Паролі відсутні."
+    echo "CRITICAL: .env файл не знайдено!"
     exit 1
 fi
 
@@ -47,30 +48,40 @@ log() {
     echo "$1"
 }
 
+# --- ПОЧАТОК ---
 log "INFO | --- Початок SMART бекапу ---"
+# Сповіщення про старт (можна вимкнути, якщо заважає)
+"$NOTIFY_SCRIPT" "🚀 Розпочинаю нічний бекап системи..." "INFO"
 
 if [ ! -f "$RCLONE_CONFIG" ]; then
-    log "CRITICAL | Конфіг Rclone не знайдено!"
+    MSG="CRITICAL | Конфіг Rclone не знайдено!"
+    log "$MSG"
+    "$NOTIFY_SCRIPT" "$MSG" "ERROR"
     exit 1
 fi
 
 # 1. БЕКАП БАЗИ
 mkdir -p "$PATH_DB_DUMP"
 log "INFO | Створення дампа бази..."
-docker exec "$DB_CONTAINER" mariadb-dump -u "$DB_USER" -p "$DB_PASS" nextcloud | gzip > "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz"
+docker exec "$DB_CONTAINER" mariadb-dump -u "$DB_USER" -p"$DB_PASS" nextcloud | gzip > "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz"
 
-if [ "${PIPESTATUS[0]}" -eq 0 ]; then
+if [ ${PIPESTATUS[0]} -eq 0 ]; then
     log "SUCCESS | Дамп створено."
-    # FIX SC2086: Лапки додано тут
+    
+    # shellcheck disable=SC2086
     "$RCLONE_BIN" --config "$RCLONE_CONFIG" copy "$PATH_DB_DUMP/nextcloud_$TIMESTAMP.sql.gz" "$RCLONE_REMOTE/Database"
+    
     find "$PATH_DB_DUMP" -name "*.sql.gz" -mtime +7 -delete
 else
-    log "ERROR | Помилка дампа бази!"
+    MSG="ERROR | Помилка створення дампа бази даних!"
+    log "$MSG"
+    "$NOTIFY_SCRIPT" "$MSG" "ERROR"
+    # Не виходимо, пробуємо зробити хоча б бекап файлів
 fi
 
 # 2. БЕКАП КОНФІГІВ
 log "INFO | Синхронізація конфігурації..."
-# FIX SC2086: Лапки додано тут
+# shellcheck disable=SC2086
 "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_CONFIGS" "$RCLONE_REMOTE/Configs" \
     --backup-dir "$RCLONE_HISTORY_DIR/Configs" \
     --exclude ".git/**" \
@@ -81,23 +92,20 @@ log "INFO | Синхронізація конфігурації..."
     --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
 
 # 3. БЕКАП ДОКУМЕНТІВ (ADMIN)
-log "INFO | Синхронізація документів (Admin)..."
 if [ -d "$PATH_DOCS" ]; then
-    # FIX SC2086: Лапки додано тут
+    # shellcheck disable=SC2086
     "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_DOCS" "$RCLONE_REMOTE/Documents" \
         --backup-dir "$RCLONE_HISTORY_DIR/Documents" \
         --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
-else
-    log "WARNING | Папка документів Admin не знайдена."
 fi
 
 # 4. БЕКАП ДОКУМЕНТІВ (WIFE)
-log "INFO | Синхронізація документів (Wife)..."
 if [ -d "$PATH_WIFE_DOCS" ]; then
-    # FIX SC2086: Лапки додано тут
+    # shellcheck disable=SC2086
     "$RCLONE_BIN" --config "$RCLONE_CONFIG" sync "$PATH_WIFE_DOCS" "$RCLONE_REMOTE/Documents_Wife" \
         --backup-dir "$RCLONE_HISTORY_DIR/Documents_Wife" \
         --transfers 4 --log-file "$LOG_FILE" --log-level ERROR
 fi
 
 log "INFO | --- Бекап завершено ---"
+"$NOTIFY_SCRIPT" "✅ Бекап успішно завершено! Файли в хмарі." "SUCCESS"
